@@ -1,5 +1,6 @@
 :root{
-    --cor-texto:#000000;
+    --cor-texto-areas-claras:#000000;
+    --cor-texto-areas-escuras: #ffffff;
     --cor-fundo: #5c20b6;
     --cor-complementar: #470ca3;
     --cor-escura: #250d4d;
