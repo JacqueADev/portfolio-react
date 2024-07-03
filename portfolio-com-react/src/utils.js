@@ -3,4 +3,4 @@ export const getImageUrl = (path) => {
 };
 
 
-/* parei em  12:36  vídeo https://youtu.be/YQCDUJ6hhNY?si=q2hIKdUtbr3gjRzE*/
+/* parei em  32:58  vídeo https://youtu.be/YQCDUJ6hhNY?si=q2hIKdUtbr3gjRzE*/

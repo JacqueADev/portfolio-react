@@ -15,6 +15,7 @@
     font-weight: bold;
     text-decoration: none;
     color: var(--cor-texto-areas-escuras);
+    padding-left: 30px;
 }
 
 .menu{
@@ -34,9 +35,56 @@
     text-decoration: none;
     cursor: pointer;
     color: var(--cor-texto-areas-escuras);
+    padding-right: 20px;
 }
 
 .menuItems a:hover{
     color: var(--cor-complementar);
     transition: 0.5s;
+}
+
+/* media queries */
+
+@media screen and (max-width: 830px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        margin-right: 10%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 11px;
+        z-index: 3;
+
+    }
+
+    .menuBtn{
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .menuItems{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        border-radius: 5px;
+        background: var(--cor-fundo);
+        background: linear-gradient(0deg, rgb(154, 107, 224) 0%, rgb(84, 43, 146)  100%);
+        padding:  24px 33px;
+        box-shadow:  0 0 4px var(--cor-fundo);
+
+
+     }
+
+     .menuOpen{
+        display: flex;
+        z-index: 1;
+
+     }
 }
