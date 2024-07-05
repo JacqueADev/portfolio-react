@@ -1,0 +1,123 @@
+@import "../../vars.css";
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 49px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--cor-texto-areas-escuras);
+    z-index: 1;
+}
+
+.title{
+    font-size: 70px;
+    font-weight: 900;
+    margin-bottom: 33px;
+    font-family: var(--font-robot);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%
+    );
+    -webkit-text-fill-color: transparent; /*cor de preenchimento do texto, semelhante à propriedade color, mas pode ser utilizado em conjunto com outras propriedades para criar efeitos especiais no texto*/
+    -webkit-background-clip: text; /*controla como a área de fundo é desenhada. ela pode ser utilizada para cortar o fundo em diferentes áreas do elemento. Com o valor text, pode fazer com que o fundo seja aplicado apenas na área do texto, criando um efeito de preenchimento de texto com o fundo.*/
+}
+
+.description{
+    font-size: 30px;
+    font-family: var(--font-robot);
+    margin-bottom: 52px;
+}
+
+.contactBtn{
+    text-decoration: none;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-areas-escuras);
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: 800;
+    border: none;
+    padding: 15px;
+    box-shadow:  0 0 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.contactBtn:hover{
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto-areas-escuras);
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+.heroImage{
+    width: 50%;
+    z-index: 1;
+
+    animation-name: floating; /* animation-name especifica o nome da animação que será aplicada ao elemento.. Precisa corresponder ao keyframes*/
+    animation-duration: 3s; /*animation-duration define a duração total da animação*/
+    animation-iteration-count: infinite; /*animation-iteration-count define o número de vezes que a animação será repetida*/
+    animation-timing-function: ease-in-out; /*animation-timing-function especifica a curva de velocidade da animação. O valor ease-in-out faz com que a animação comece devagar, acelere no meio e desacelere no final.*/
+}
+
+@keyframes floating {
+    0% {
+        transform:  translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    } /*@keyframes define os estados da animação ao longo do tempo. Ele mapeia as porcentagens para estilos específicos.
+
+    Estrutura do floating
+    0%: O início da animação, onde o elemento está na posição original
+    50%: No meio da animação, o elemento é movido 10px para baixo 
+    100%: No final da animação, o elemento retorna à posição original*/
+}
+
+.topBlur{
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    min-width: 350px;
+    min-width: 350px;
+    top: -128px;
+    left: -10vw;
+    border-radius: 764px;
+    background: var(--cor-fundo);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.bottomBlur{
+    position: absolute;
+    width: 70vw;
+    height: 50vw;
+    min-width: 350px;
+    min-width: 250px;
+    top: 246px;
+    right: -25vw;
+    border-radius: 764px;
+    background: var(--cor-fundo);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+@media screen  and (max-width: 830px){
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .content{
+        align-items: center;
+    }
+    
+}
