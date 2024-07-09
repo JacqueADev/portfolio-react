@@ -13,16 +13,16 @@ export const Navbar = () => {
         <img className={styles.menuBtn} src={menuOpen ? getImageUrl("nav/closeIcon.png") : getImageUrl("nav/menuIcon.png")} alt="menu-button" onClick={() => setMenuOpen(!menuOpen)} />
         <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`} onClick={() => setMenuOpen(false)}>
           <li>
-            <a href="#sobre">Sobre</a>
+            <a href="#about">Sobre</a>
           </li>
           <li>
-            <a href="#experiencia">Experiência</a>
+            <a href="#experience">Experiência</a>
           </li>
           <li>
-            <a href="#projetos">Projetos</a>
+            <a href="#projects">Projetos</a>
           </li>
           <li>
-            <a href="#contato">Contato</a>
+            <a href="#contact">Contato</a>
           </li>
         </ul>
       </div>
