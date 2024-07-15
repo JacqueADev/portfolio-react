@@ -1,5 +1,10 @@
 @import "../../vars.css";
 
+
+.menuBtn {
+    display: none;
+}
+
 .navbar {
  position: relative;
  display: flex;
